@@ -68,8 +68,8 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,knex)})
 
 
 
-app.listen(3000,()=>{
-    console.log("app is running sucss");
+app.listen(process.env.PORT || 3000,()=>{
+    console.log(`app is running sucess on ${process.env.PORT}`);
 })
 /*
 -->res=this is working
