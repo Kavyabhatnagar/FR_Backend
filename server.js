@@ -46,7 +46,7 @@ const knex = require('knex')({
 }*/
 
 app.get('/',(req,res)=>{
-    res.send(database.users)
+    res.send('it is working')
 })
 /*app.post('/SignIn',(req,res)=>{
     if(req.body.password===database.users[0].password && req.body.email=== database.users[0].email)
