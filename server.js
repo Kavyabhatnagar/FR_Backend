@@ -45,9 +45,7 @@ const knex = require('knex')({
     ]
 }*/
 
-app.get('/',(req,res)=>{
-    res.send('it is working')
-})
+app.get('/',(req,res)=>{res.send('it is working')})
 /*app.post('/SignIn',(req,res)=>{
     if(req.body.password===database.users[0].password && req.body.email=== database.users[0].email)
     {
@@ -68,7 +66,7 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,knex)})
 
 
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log(`app is running sucess on ${process.env.PORT}`);
 })
 /*
