@@ -9,13 +9,13 @@ const image=require('./controller/image');
 const profile = require('./controller/profile');
 
 const app=express();
-app.use(bodyParser.json());
 app.use(cors())
+app.use(bodyParser.json());
 const knex = require('knex')({
     client: 'pg',
     connection: {
       host : '127.0.0.1',
-    //   port : 3306,
+    //   port : process.env.PORT,
       user : 'postgres',
       password : 'root',
       database : 'faceRecognition'
